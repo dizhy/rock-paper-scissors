@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  background: rgb(33, 197, 217);
+  background: linear-gradient(90deg, rgba(33, 197, 217, 1) 0%, rgba(214, 195, 126, 1) 50%, rgba(33, 197, 217, 1) 100%);
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 50px 0 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.score {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  gap: 3px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.player-label {
+  position: absolute;
+  bottom: 25px;
+  left: 20%;
+}
+
+.pc-label {
+  position: absolute;
+  bottom: 25px;
+  right: 20%;
+}
+
+.wins {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.chose {
+  width: 300px;
+  height: 300px;
+}
+
+.pc-chose {
+  transform: scaleX(-1);
+}
