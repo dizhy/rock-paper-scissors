@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(33, 197, 217);
+  background: linear-gradient(90deg, rgb(33, 197, 217) 0%, rgb(214, 195, 126) 50%, rgb(33, 197, 217) 100%);
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 50px 0 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.score {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  gap: 3px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.winner-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.display__player-text, .display__pc-text {
+  position: absolute;
+  bottom: 25px;
+}
+.display__player-text {
+  left: 20%;
+}
+.display__pc-text {
+  right: 20%;
+}
+.display__pc-chose {
+  transform: scaleX(-1);
+}
+
+.chose {
+  width: 300px;
+  height: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */

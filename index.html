@@ -3,31 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Rock Paper Scissors Game</title>
   </head>
   <body>
-    <h1>Rock paper scissors</h1>
+    <h1 class="title">Rock paper scissors</h1>
 
     <div class="container">
       <div class="score">
-        <p class="player-score">0</p>
-        <span>:</span>
-        <p class="pc-score">0</p>
+        <p class="score__player-score">0</p>
+        <span class="score__divider">:</span>
+        <p class="score__pc-score">0</p>
       </div>
-      <p class="wins">Your turn!</p>
+
+      <p class="winner-text">Your turn!</p>
 
       <div class="display">
-        <span class="player-label">Player</span>
-        <div class="display-player">
-          <img class="chose player-chose" src="img/player.svg" alt="" />
+        <span class="display__player-text">Player</span>
+        <div class="display__player">
+          <img class="chose display__player-chose" src="img/player.svg" alt="Plater's chose" />
         </div>
-        <span>VS</span>
-        <span class="pc-label">PC</span>
-        <div class="display-pc">
-          <img class="chose pc-chose" src="img/pc.svg" alt="" />
+
+        <span class="vs-text">VS</span>
+
+        <span class="display__pc-text">PC</span>
+        <div class="display__pc">
+          <img class="chose display__pc-chose" src="img/pc.svg" alt="PC's chose" />
         </div>
       </div>
+
       <div class="btns">
         <button data-name="rock" class="btn btn-rock">Rock</button>
         <button data-name="paper" class="btn btn-paper">Paper</button>
@@ -36,6 +40,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

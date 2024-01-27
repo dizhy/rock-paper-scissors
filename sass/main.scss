@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+// Variables
+@mixin main-gradient {
+  background: rgb(33, 197, 217);
+  background: linear-gradient(90deg, rgba(33, 197, 217, 1) 0%, rgba(214, 195, 126, 1) 50%, rgba(33, 197, 217, 1) 100%);
+}
+
+@mixin position-bottom {
+  position: absolute;
+  bottom: 25px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include main-gradient;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 50px 0 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.score {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  gap: 3px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.winner-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+  &__player-text,
+  &__pc-text {
+    @include position-bottom;
+  }
+
+  &__player-text {
+    left: 20%;
+  }
+
+  &__pc-text {
+    right: 20%;
+  }
+
+  &__pc-chose {
+    transform: scaleX(-1);
+  }
+}
+
+.chose {
+  width: 300px;
+  height: 300px;
+}
