@@ -1,8 +1,4 @@
-let playerChose = document.querySelector(".display__player-chose");
-const pcChose = document.querySelector(".display__pc-chose").src;
-const btnRock = document.querySelector(".btn-rock");
-const btnPaper = document.querySelector(".btn-paper");
-const btnScissors = document.querySelector(".btn-scissors");
+// Getting DOM elements
 const displayPlayer = document.querySelector(".display__player");
 const displayPC = document.querySelector(".display__pc");
 const btns = document.querySelectorAll(".btns>button");
@@ -10,9 +6,8 @@ const winner = document.querySelector(".winner-text");
 const playerScoreElemet = document.querySelector(".score__player-score");
 const pcScoreElemet = document.querySelector(".score__pc-score");
 
-// Inits
+// Init state
 const items = ["paper", "rock", "scissors"];
-
 let playerScore = 0;
 let pcScore = 0;
 
@@ -44,6 +39,7 @@ function createPC(src) {
   displayPC.append(imgDiv);
 }
 
+// Setting score
 const scoreSet = () => {
   playerScoreElemet.textContent = playerScore;
   pcScoreElemet.textContent = pcScore;
@@ -67,12 +63,13 @@ function whoWins(player, pc) {
   winner.textContent = winnerName;
 }
 
-// Reset
+// Reset states
 const resetAll = () => {
   playerScore = 0;
   pcScore = 0;
-  scoreSet();
   winner.textContent = "Your turn!";
+
+  scoreSet();
   createPlayer("player");
   createPC("pc");
 };
