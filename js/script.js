@@ -18,7 +18,7 @@ let pcScore = 0;
 
 // Functions
 const randomChose = () => {
-  a = Math.floor(Math.random() * 3);
+  let a = Math.floor(Math.random() * 3);
   return items[a];
 };
 

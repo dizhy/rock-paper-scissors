@@ -8,7 +8,7 @@
 
 @mixin position-bottom {
   position: absolute;
-  bottom: 25px;
+  bottom: 10px;
 }
 
 *,
@@ -55,6 +55,7 @@ body {
   justify-content: space-around;
   align-items: center;
   position: relative;
+  margin-bottom: 15px;
 
   &__player-text,
   &__pc-text {
@@ -77,4 +78,38 @@ body {
 .chose {
   width: 300px;
   height: 300px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &__btn {
+    display: inline-block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  &__rock {
+    background-image: url("../img/rock.svg");
+  }
+  &__paper {
+    background-image: url("../img/paper.svg");
+  }
+  &__scissors {
+    background-image: url("../img/scissors.svg");
+  }
+  &__reset {
+    background-image: url("../img/reset.svg");
+    margin-left: 30px;
+  }
 }
