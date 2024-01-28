@@ -13,31 +13,31 @@ let pcScore = 0;
 
 // Functions
 const randomChose = () => {
-  let a = Math.floor(Math.random() * 3);
-  return items[a];
+  const randomIndex = Math.floor(Math.random() * 3);
+  return items[randomIndex];
 };
 
 // Create Player chose
-function createPlayer(src) {
+const createPlayer = (src) => {
   displayPlayer.innerHTML = "";
 
-  let imgDiv = document.createElement("img");
+  const imgDiv = document.createElement("img");
   imgDiv.classList = "chose display__player-chose";
   imgDiv.src = `img/${src}.svg`;
 
   displayPlayer.append(imgDiv);
-}
+};
 
 // Create PC chose
-function createPC(src) {
+const createPC = (src) => {
   displayPC.innerHTML = "";
 
-  let imgDiv = document.createElement("img");
+  const imgDiv = document.createElement("img");
   imgDiv.classList = "chose display__pc-chose";
   imgDiv.src = `img/${src}.svg`;
 
   displayPC.append(imgDiv);
-}
+};
 
 // Setting score
 const scoreSet = () => {
@@ -46,7 +46,7 @@ const scoreSet = () => {
 };
 
 // Show winner
-function whoWins(player, pc) {
+const whoWins = (player, pc) => {
   let winnerName;
   if (player === pc) {
     winnerName = "Draw!";
@@ -61,7 +61,7 @@ function whoWins(player, pc) {
   }
 
   winner.textContent = winnerName;
-}
+};
 
 // Reset states
 const resetAll = () => {
@@ -77,7 +77,7 @@ const resetAll = () => {
 // Events
 btns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
-    let clickTarget = event.target.dataset.name;
+    const clickTarget = event.target.dataset.name;
 
     if (clickTarget === "reset") {
       resetAll();
